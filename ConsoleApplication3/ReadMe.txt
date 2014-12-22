@@ -38,3 +38,6 @@ AppWizard uses "TODO:" comments to indicate parts of the source code you
 should add to or customize.
 
 /////////////////////////////////////////////////////////////////////////////
+
+
+This application is taking care of extracting all the necesary information about installed applications and prepared cross-comapre list for the AirApp tool that checkes this list agains predefined content on the ColdFusion server.
