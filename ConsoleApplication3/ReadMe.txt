@@ -40,4 +40,19 @@ should add to or customize.
 /////////////////////////////////////////////////////////////////////////////
 
 
-This application is taking care of extracting all the necesary information about installed applications and prepared cross-comapre list for the AirApp tool that checkes this list agains predefined content on the ColdFusion server.
+This application is taking care of extracting all the necesary information about installed applications and prepared cross-comapre 
+list for the AirApp tool that checkes this list agains predefined content on the ColdFusion server.
+
+
+*****************************************************************************
+Hint
+
+
+
+In order to build a more-or-less reliable list of applications that appear in the "Programs and Feautres" in the Control Panel, you have to consider that not all applications were installed using MSI. WMI only provides the ones installed with MSI.
+
+Here is a short summary of what I've found out:
+
+MSI applications always have a Product Code (GUID) subkey under HKLM\...\Uninstall and/or under HKLM\...\Installer\UserData\S-1-5-18\Products. In addition, they may have a key that looks like HKLM\...\Uninstall\NotAGuid.
+
+Non-MSI applications do not have a product code, and therefore have keys like HKLM\...\Uninstall\NotAGuid or HKCU\...\Uninstall\NotAGuid.
